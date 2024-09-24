@@ -16,10 +16,11 @@ spec:
     spec:
       containers:
       - name: sidecar-proxy
-        image: eicnix/sidecar-proxy-example-sidecar-proxy
+        image: localhost:5001/traefiikforwardauthentication_nginx-proxy:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
       - name: application
-        image: eicnix/sidecar-proxy-example
+        image: localhost:5001/traefiikforwardauthentication_apps-api:latest
+        #image: eicnix/sidecar-proxy-example
         imagePullPolicy: Always
